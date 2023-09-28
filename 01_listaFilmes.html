@@ -9,12 +9,26 @@
     */
 
     //ENTRADA
-
-    
+    const quantosF = Number(prompt("Informe quantos filmes deseja cadastrar:").trim());
+    let comedia = [];
+    let drama = [];
+    let romance = [];
     //PROCESSAMENTO
-    
+    for (let numF = 1; numF <= quantosF; numF++) {
+        let filmes = prompt("Informe um filme:").trim();
+        let gênero = prompt(`Informe o gênero desse filme: ${filmes}, e serão cadastrados os gêneros comédia-C, drama-D e romance-R`).trim().toUpperCase();
+        if(gênero == "C"){
+            comedia.push(filmes);
+        }
+        else if(gênero == "D"){
+            drama.push(filmes);
+        }
+        else if(gênero == "R"){
+            romance.push(filmes);
+        }
+    }
     
     //SAÍDA
-    
+    alert(`Gêneros: \nComédia: ${comedia} \nDrama: ${drama} \nRomance: ${romance}`)
     
 </script>
