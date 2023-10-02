@@ -7,12 +7,18 @@
     */
 
     //ENTRADA
-
+    let quaBanco = 10000
+    let rendendo = 1.03
+    let subtraído = 300
+    let meses = 0
     
     //PROCESSAMENTO
-    
+    for (let contador = 1; quaBanco>0; contador++){
+        quaBanco = (quaBanco - subtraído) * rendendo
+        meses++
+    }
     
     //SAÍDA
-    
+    alert(`O valor investido for = 0, em ${meses} meses.`)
 
 </script>

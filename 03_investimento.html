@@ -8,11 +8,26 @@
     */
 
     //ENTRADA
-
-    
+    let rendimento = 0.018;
+    let investindo = 100;
+    let investimentoF24 = 0;
+    let investimentoF48 = 0;
+    let investimentoF96 = 0;
+    let meses = 0;
     //PROCESSAMENTO
-    
+    for (meses; meses <= 96; meses += 2) {
+        if(meses == 24){
+            investimentoF24 = investindo + ((investindo * rendimento) * 24);
+        }
+        if(meses == 48){
+            investimentoF48 = investindo + ((investindo * rendimento) * 48);
+        }
+        if(meses == 96){
+            investimentoF96 = investindo + ((investindo * rendimento) * 96);
+        }
+    }
     
     //SAÍDA
-    
+    alert(`Valor em 24 meses: R$${investimentoF24.toFixed(2)} \nValor em 48 meses: R$${investimentoF48.toFixed(2)} \nValor em 96 meses: R$${investimentoF96.toFixed(2)}`)
+    alert(`O rendimento em 24 meses: R$${(investimentoF24 - investindo).toFixed(2)} \nO rendimento em 48 meses: R$${(investimentoF48 - investindo).toFixed(2)} \nO rendimento em 24 meses: R$${(investimentoF96 - investindo).toFixed(2)}`)
 </script>
