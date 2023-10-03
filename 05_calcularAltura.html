@@ -8,12 +8,15 @@
     */
 
     //ENTRADA
-
-    
+    const qaPessoas = Number(prompt("Informe a quantidade de pessoas que informaram a medida:"));
+    let alturas = [];
     //PROCESSAMENTO
-    
+    for (let contador = 1; contador <= qaPessoas; contador++) {
+        let altura = Number(prompt("Informe a sua altura:").trim().replace(",","."));
+        alturas.push(altura);
+    }
     
     //SAÍDA
-    
+    alert(`A menor altura: ${alturas.sort((a, b) => a-b)[0]} \nA maior altura: ${alturas.sort((a, b) => b-a)[0]}`);
 
 </script>

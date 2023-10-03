@@ -8,12 +8,23 @@
     */
 
     //ENTRADA
-
-    
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let numAba = [];
+    let numAci = [];
     //PROCESSAMENTO
-    
-    
+    for (let contador = 0; contador < listaDeNumeros.length; contador++) {
+        if(listaDeNumeros[contador] < 50){
+            numAba.push(listaDeNumeros[contador]);
+        }
+        else if(listaDeNumeros[contador] > 50){
+            numAci.push(listaDeNumeros[contador]);
+        }
+    }
+
+    let percentAba = numAba.length * 100 / listaDeNumeros.length;
+    let percentAci = numAci.length * 100 / listaDeNumeros.length;
+
     //SAÍDA
-    
+    document.write(`Os números abaixo de 50: <ul><li>${numAba.join("</li><li>")} </li></ul> Percentual: ${percentAba}% <br> Os números acima de 50: <ul><li>${numAci.join("</li><li>")} </li></ul> Percentual: ${percentAci}%`)
 
 </script>
