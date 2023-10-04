@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -8,12 +9,15 @@
     */
 
     //ENTRADA
-
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    const quant = Number(prompt("Quantos números deseja adicionar na sequencia de fibonacci?"));
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= quant; i++) {
+        fibonacci.push(fibonacci[fibonacci.length -1] + fibonacci[fibonacci.length -2]);        
+    }
     
     //SAÍDA
-    
+    document.write(fibonacci)
 
 </script>

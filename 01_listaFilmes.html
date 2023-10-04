@@ -26,9 +26,33 @@
         else if(gênero == "R"){
             romance.push(filmes);
         }
+        if(comedia == "" && drama == "" && romance == ""){
+            alert(`Não teve nenhum filme cadastrado em nenhum gênero`);
+        }
+        else if(drama == "" && romance == ""){
+            alert(`Comédia: ${comedia}`);
+        }
+        else if(comedia == "" && romance == ""){
+            alert(`Drama: ${drama}`);
+        }
+        else if(comedia == "" && drama == ""){
+            alert(`Romance: ${romance}`);
+        }
+        else if(romance == ""){
+            alert(`Comédia: ${comedia} \nDrama: ${drama}`);
+        }
+        else if(drama == ""){
+            alert(`Comédia: ${comedia} \nRomance: ${romance}`);
+        }
+        else if(comedia == ""){
+            alert(`Drama: ${drama} \nRomance: ${romance}`);
+        }
+        else{
+            alert(`Gêneros \ncomédia: ${comedia} \ndrama: ${drama} \nromance: ${romance}`);
+        }
     }
-    
+ 
     //SAÍDA
-    alert(`Gêneros: \nComédia: ${comedia} \nDrama: ${drama} \nRomance: ${romance}`)
+    
     
 </script>

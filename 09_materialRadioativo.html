@@ -7,12 +7,27 @@
     */
 
     //ENTRADA
-
+    const massaIncial = Number(prompt('Informe a massa inicial do material radioativo:').replace(",","."));
     
     //PROCESSAMENTO
-    
-    
+    let tempo = 0;
+    let massaFinal = massaIncial;
+    for (tempo = 0; massaFinal >= 1; tempo++) {0
+        massaFinal = massaFinal / 2;
+    }
+    const horas = tempo / 60;
+    const minutos = tempo % 60;
     //SAÍDA
+    document.write(`A massa inicial era de ${massaIncial} gramas.<br> A massa final foi de ${massaFinal} e o <br>tempo foi de ${tempo} minutos`)
+    if(horas > 0){
+        document.write(`<br>São necessárias ${horas.toFixed(2)} horas`)
     
+    if(minutos > 0){
+        document.write(` e ${minutos} minutos para a redução de massa a menos de 1 grama`)
+    }
+    }
+    else{
+        document.write(`São necessários ${minutos} minutos para a redução da massa a menos de 1 grama.`)
+    }
 
 </script>
