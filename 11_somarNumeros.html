@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -6,15 +7,20 @@
     */
 
     //ENTRADA
-
-
-    //ENTRADA
-
+    let somaPar = 0;
+    let somaImpar = 0;
     
     //PROCESSAMENTO
-    
+    for (let i = 1; i <= 100; i++) {
+        if(i % 2 == 0){
+            somaPar += i;
+        }
+        else{
+            somaImpar += i;
+        }
+    }
     
     //SAÍDA
-    
+    alert(`Soma dos números Pares: ${somaPar} \nSoma dos números Ímpares: ${somaImpar}`);
 
 </script>

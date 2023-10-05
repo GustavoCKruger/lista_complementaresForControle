@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -8,12 +9,14 @@
     */
 
     //ENTRADA
-
     
     //PROCESSAMENTO
-    
-    
+    let notasProgramacaoI = [4, 3, 5, 10, 9, 2, 7, 10, 8, 7, 6, 1, 5, 2, 3];
+    let media = notasProgramacaoI.reduce((soma, nota) => soma + nota, 0) / notasProgramacaoI.length;
+    let maior = Math.max(...notasProgramacaoI);
+    let menor = Math.min(...notasProgramacaoI);
+
     //SAÍDA
-    
+    alert(`A maior média: ${maior} \nA menor média: ${menor} \nE a média da turma: ${media.toFixed(2)}`)
 
 </script>
